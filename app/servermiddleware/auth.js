@@ -61,11 +61,11 @@ router.get(
       .get(`${apiBaseUrl}/auth/twitch/callback` + req._parsedOriginalUrl.search)
       .then((response) => {
         req.cookies.set('auth.jwt', response.data.jwt)
+        return res.redirect(301, '/')
       })
       .catch((e) => {
         return res.sendStatus(500)
       })
-    return res.redirect(301, '/')
   })
 )
 
