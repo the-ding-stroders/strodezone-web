@@ -1,0 +1,50 @@
+{
+  "name": "strodezone-web",
+  "version": "1.0.0",
+  "description": "Community management website for The Ding Stroders",
+  "author": "David Thomas",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "lint-staged": {
+    "*.{js,vue}": "yarn lint",
+    "*.{css,vue}": "stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.10.3",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "cookie-universal": "^2.1.3",
+    "cookie-universal-nuxt": "^2.1.3",
+    "nuxt": "^2.12.2",
+    "querystring": "^0.2.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.0.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/router": "^1.5.0",
+    "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/tailwindcss": "^2.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.0.0",
+    "lint-staged": "^10.0.0",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.3.3"
+  }
+}

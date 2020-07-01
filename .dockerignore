@@ -1,0 +1,8 @@
+.dockerignore
+.git
+.gitignore
+Dockerfile
+app/.env
+app/node_modules/**/*
+app/node_modules
+app/yarn-error.log
