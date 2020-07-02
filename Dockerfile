@@ -9,7 +9,7 @@ RUN yarn install --network-timeout 100000
 
 COPY ./app/ .
 
-# ENV NODE_ENV production
+ENV NODE_ENV production
 
 RUN yarn build
 
