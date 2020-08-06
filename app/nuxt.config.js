@@ -19,8 +19,8 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   server: {
-    host: process.env.NUXT_HOST,
-    port: process.env.NUXT_PORT,
+    host: process.env.NUXT_HOST || '127.0.0.1',
+    port: process.env.NUXT_PORT || '3000',
   },
   /*
    ** Customize the progress-bar color
