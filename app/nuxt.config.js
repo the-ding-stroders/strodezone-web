@@ -73,6 +73,7 @@ export default {
     extend(config, ctx) {},
   },
   serverMiddleware: [
+    '~/servermiddleware/logger.js',
     // Adds the Strapi social login routes
     '~/servermiddleware/cookies.js',
     '~/servermiddleware/auth.js',
