@@ -2,10 +2,12 @@ FROM node:12.18-alpine AS BUILD_IMAGE
 
 WORKDIR /usr/src/app
 
-COPY ./app/package.json ./app/yarn.lock ./
+COPY ./app/package.json ./app/yarn.lock ./app/.yarnclean ./
 
 # Run install using lockfile and with increased net timeout
-RUN yarn --frozen-lockfile --network-timeout 100000
+RUN yarn --frozen-lockfile --network-timeout 100000 && \
+    yarn cache clean && \
+    yarn autoclean --force
 
 COPY ./app/ .
 
